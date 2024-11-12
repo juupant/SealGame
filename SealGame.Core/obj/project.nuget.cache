@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "epC7B9il2sKjgmCFewMCdixgVkryh6f0E765Ve3rTxdCFpgAJ9UQnd+/6wjRJ3dOpX03MCnwwPtmUVmC/BWF0Q==",
+  "dgSpecHash": "Q5X2eXAFYZ2reGqVQv5tJbzz/s4t1l/D6lPSJtKmOTRO4G3sJY8p43zrxnnJDTzdrTeROoaF3BgzlSUqxnwbhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\SealGame.Core.csproj",
+  "projectFilePath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Core\\SealGame.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alan Markus\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Alan Markus\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

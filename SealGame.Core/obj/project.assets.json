@@ -4045,11 +4045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\SealGame.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Core\\SealGame.Core.csproj",
       "projectName": "SealGame.Core",
-      "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\SealGame.Core.csproj",
+      "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Core\\SealGame.Core.csproj",
       "packagesPath": "C:\\Users\\Alan Markus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\obj\\",
+      "outputPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alan Markus\\AppData\\Roaming\\NuGet\\NuGet.Config",
