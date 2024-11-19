@@ -1,70 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SealGame.Core.Domain;
 
-namespace SealGame.Core.Domain { }
-public class Player
+namespace SealGame.Core.Domain
 {
-    public string Name { get; set; }
-    public int Currency { get; set; }
-    public int Level { get; set; }
-    public List<Item> Inventory { get; set; }
-    public List<Seal> SealsOwned { get; set; }
-    public int DailyTasksCompleted { get; set; }
-
-    public Player(string name, int startingCurrency)
+    public class Player
     {
-        Name = name;
-        Currency = startingCurrency;
-        Level = 1;
-        Inventory = new List<Item>();
-        SealsOwned = new List<Seal>();
-        DailyTasksCompleted = 0;
-    }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Currency { get; set; }
+        public int Level { get; set; }
+        public List<Item> Inventory { get; set; } = new List<Item>(); 
+        public List<Seal> SealsOwned { get; set; } = new List<Seal>();
+        public int DailyTasksCompleted { get; set; }
 
-    public bool BuyItem(Item item)
-    {
-        if (Currency >= item.Cost)
+        
+        public Player() { }
+
+        
+        public Player(string name, int startingCurrency)
         {
-            Currency -= item.Cost;
-            Inventory.Add(item);
-            return true; 
+            Name = name;
+            Currency = startingCurrency;
+            Level = 1;
+            DailyTasksCompleted = 0;
         }
-        return false; 
-    }
 
-    public bool UseItem(Seal seal, Item item)
-    {
-        if (Inventory.Contains(item))
+        public bool BuyItem(Item item)
         {
-            item.ApplyEffect(seal);
-            Inventory.Remove(item);
-            return true; 
+            if (Currency >= item.Cost)
+            {
+                Currency -= item.Cost;
+                Inventory.Add(item);
+                return true;
+            }
+            return false;
         }
-        return false;
-    }
 
-    public void LevelUp()
-    {
-        Level++;
-    }
+        public bool UseItem(Seal seal, Item item)
+        {
+            if (Inventory.Contains(item))
+            {
+                item.ApplyEffect(seal);
+                Inventory.Remove(item);
+                return true;
+            }
+            return false;
+        }
 
-    public void CompleteTask(int reward)
-    {
-        DailyTasksCompleted++;
-        Currency += reward;
-    }
+        public void LevelUp()
+        {
+            Level++;
+        }
 
-    public List<Item> GetInventory()
-    {
-        return Inventory;
-    }
+        public void CompleteTask(int reward)
+        {
+            DailyTasksCompleted++;
+            Currency += reward;
+        }
 
-    public List<Seal> GetSeals()
-    {
-        return SealsOwned;
+        public List<Item> GetInventory() => Inventory;
+
+        public List<Seal> GetSeals() => SealsOwned;
     }
 }

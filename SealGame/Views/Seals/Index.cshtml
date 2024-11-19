@@ -1,0 +1,41 @@
+﻿@using SealGame.Core.Domain
+@using SealGame.Data
+@model IEnumerable<Seal>
+
+<h2>Seal Collection</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Seal</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Happiness</th>
+            <th>Hunger</th>
+            <th>Enrichment</th>
+            <th>Cleanliness</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Species.Name</td>
+                <td>@item.Happiness</td>
+                <td>@item.Hunger</td>
+                <td>@item.Enrichment</td>
+                <td>@item.Cleanliness</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

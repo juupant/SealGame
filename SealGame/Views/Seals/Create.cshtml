@@ -1,0 +1,25 @@
+﻿@using SealGame.Core.Domain
+@using SealGame.Data
+@model Seal
+<h2>Create a New Seal</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Species" class="control-label">Species</label>
+        <select asp-for="Species" asp-items="ViewBag.SpeciesId" class="form-control"></select>
+        <span asp-validation-for="Species" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create New Seal</a>
+    </p>
+
+</form>

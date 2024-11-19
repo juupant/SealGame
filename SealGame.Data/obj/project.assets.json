@@ -4065,11 +4065,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Data\\SealGame.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Data\\SealGame.Data.csproj",
       "projectName": "SealGame.Data",
-      "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Data\\SealGame.Data.csproj",
+      "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Data\\SealGame.Data.csproj",
       "packagesPath": "C:\\Users\\Alan Markus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Data\\obj\\",
+      "outputPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alan Markus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4086,8 +4086,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Core\\SealGame.Core.csproj": {
-              "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame1\\SealGame.Core\\SealGame.Core.csproj"
+            "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\SealGame.Core.csproj": {
+              "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\SealGame.Core.csproj"
             }
           }
         }

@@ -1,29 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SealGame.Core.Domain
 {
     public class Seal
     {
-        [Key]
+        public int Id { get; set; }
+
+        [Required]
         public string Name { get; set; }
-        public SealSpecies Species { get; set; }
+
         public int Happiness { get; set; }
         public int Hunger { get; set; }
         public int Enrichment { get; set; }
         public int Cleanliness { get; set; }
+
+        
+        public int SpeciesId { get; set; }
+
+        public SealSpecies Species { get; set; } 
+
+        
+        public Seal() { }
+
+        
         public Seal(string name, SealSpecies species)
         {
             Name = name;
             Species = species;
-            Happiness = species.MaxHappiness / 2; // Start at half of max
-            Hunger = species.HungerTolerance / 2;
-            Enrichment = species.EnrichmentThreshold / 2;
-            Cleanliness = 100; // Clean by default
+            Happiness = species.MaxHappiness / 2;
+            Hunger = 0;
+            Enrichment = 0;
+            Cleanliness = 100;
         }
     }
 }

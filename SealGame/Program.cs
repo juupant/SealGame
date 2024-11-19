@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using SealGame.Data;
+
 namespace SealGame
 {
     public class Program
@@ -8,6 +11,9 @@ namespace SealGame
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<DatabaseTaskDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 

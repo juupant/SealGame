@@ -1,0 +1,37 @@
+﻿@using SealGame.Core.Domain
+@using SealGame.Data
+@model Seal
+<h2>Edit Seal: @Model.Name</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Species" class="control-label">Species</label>
+        <select asp-for="Species" asp-items="ViewBag.SpeciesId" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Happiness" class="control-label">Happiness</label>
+        <input asp-for="Happiness" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Hunger" class="control-label">Hunger</label>
+        <input asp-for="Hunger" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Enrichment" class="control-label">Enrichment</label>
+        <input asp-for="Enrichment" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Cleanliness" class="control-label">Cleanliness</label>
+        <input asp-for="Cleanliness" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>

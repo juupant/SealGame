@@ -1,0 +1,21 @@
+﻿@using SealGame.Core.Domain
+@using SealGame.Data
+@model Seal
+<div>
+    <h2>Seal Details: @Model.Name</h2>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Species</dt>
+        <dd class="col-sm-10">@Model.Species.Name</dd>
+
+        <dt class="col-sm-2">Happiness</dt>
+        <dd class="col-sm-10">@Model.Happiness / @Model.Species.MaxHappiness</dd>
+
+        <dt class="col-sm-2">Cleanliness</dt>
+        <dd class="col-sm-10">@Model.Cleanliness / 100</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
