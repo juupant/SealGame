@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SealGame.Core.ServiceInterface;
 using SealGame.Data;
 
 namespace SealGame
@@ -11,11 +12,15 @@ namespace SealGame
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<ISealService, ISealService>();
+
+            builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDbContext<DatabaseTaskDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

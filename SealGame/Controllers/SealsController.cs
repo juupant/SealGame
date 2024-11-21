@@ -2,13 +2,37 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SealGame.Core.Domain;
+using SealGame.Core.Dto;
+using SealGame.Core.ServiceInterface;
 using SealGame.Data;
+
 namespace SealGame.Controllers
 {
     public class SealsController : Controller
     {
         private readonly DatabaseTaskDbContext _context;
+        private readonly IFileServices _fileServices;
+        private readonly ISealService _sealService;
 
+        public SealsController(IFileServices fileServices, ISealService sealService)
+        {
+            _fileServices = fileServices;
+            _sealService = sealService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(SealDto dto)
+        {
+            var seal = await _sealService.CreateSeal(dto);
+
+            if (seal != null)
+            {
+                await _fileServices.UploadFilesToDatabase(dto, seal);
+                return RedirectToAction("Details", new { id = seal.Id });
+            }
+
+            return View(dto);
+        }
         public SealsController(DatabaseTaskDbContext context)
         {
             _context = context;

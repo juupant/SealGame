@@ -12,6 +12,14 @@ namespace SealGame.Core.Dto
     {
         public string? Name { get; set; }
         public int SpeciesId { get; set; }
+
+        public int Happiness { get; set; }
+        public int Hunger { get; set; }
+        public int Enrichment { get; set; }
+        public int Cleanliness { get; set; }
+
+        public DateTime? SealCreated { get; set; }
+
         public List<IFormFile>? Files { get; set; }
     }
 }

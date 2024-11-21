@@ -18,4 +18,9 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SealGame.Core\SealGame.Core.csproj" />
+    <ProjectReference Include="..\SealGame.Data\SealGame.Data.csproj" />
+  </ItemGroup>
+
 </Project>
