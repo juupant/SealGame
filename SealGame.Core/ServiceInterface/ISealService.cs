@@ -13,5 +13,6 @@ namespace SealGame.Core.ServiceInterface
         Task<Seal> CreateSeal(SealDto dto);
         Task<Seal> GetSealById(int id);
         Task DeleteSeal(int id);
+        Task<Seal> Update(SealDto id);
     }
 }

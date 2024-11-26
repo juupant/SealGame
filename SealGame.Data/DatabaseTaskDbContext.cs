@@ -10,8 +10,6 @@ namespace SealGame.Data
         public DatabaseTaskDbContext(DbContextOptions<DatabaseTaskDbContext> options) : base(options) { }
 
         public DbSet<Seal> Seals { get; set; }
-        public DbSet<Player> Players { get; set; }
-        public DbSet<Item> Items { get; set; }
         public DbSet<SealSpecies> SealSpecies { get; set; }
         public DbSet<FileToDatabase> FileToDatabaseDto { get; set; }
 

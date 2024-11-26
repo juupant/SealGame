@@ -7,7 +7,7 @@ using SealGame.Core.Domain;
 
 namespace SealGame.Core.Dto
 {
-    public class FileToDatabase
+    public class FileToDatabaseDto
     {
         public Guid Id { get; set; }
         public string? ImageTitle { get; set; }

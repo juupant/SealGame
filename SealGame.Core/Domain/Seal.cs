@@ -14,9 +14,10 @@ namespace SealGame.Core.Domain
         public int Enrichment { get; set; }
         public int Cleanliness { get; set; }
 
-        
+        [Required]
         public int SpeciesId { get; set; }
 
+        [Required]
         public SealSpecies Species { get; set; } 
 
         
