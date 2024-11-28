@@ -94,7 +94,7 @@ namespace SealGame.ApplicationServices.Services
             return seal;
         }
 
-        public async Task<Seal?> PlayWithSealAsync(int id)
+        public async Task<Seal> PlayWithSealAsync(int id)
         {
             var seal = await _context.Seals
                 .Include(s => s.Species)
@@ -143,6 +143,26 @@ namespace SealGame.ApplicationServices.Services
         }
 
         public Task<Seal> Update(SealDto id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Seal>> ISealService.GetAllSealsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task ISealService.CreateSealAsync(string name, int speciesId)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task ISealService.UpdateSealStatsAsync(int id, int happiness, int hunger, int enrichment, int cleanliness)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task ISealService.DeleteSealAsync(int id)
         {
             throw new NotImplementedException();
         }

@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SealGame.ApplicationServices\SealGame.ApplicationServices.csproj" />
+    <ProjectReference Include="..\SealGame.Core\SealGame.Core.csproj" />
     <ProjectReference Include="..\SealGame.Data\SealGame.Data.csproj" />
   </ItemGroup>
 

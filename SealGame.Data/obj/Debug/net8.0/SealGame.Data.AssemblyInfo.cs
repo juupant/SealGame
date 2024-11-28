@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SealGame.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba5732a8a276220572db0e79c2b25d252965038f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9ced632a8fcc318ade2c45bb28ade6ac1444b25")]
 [assembly: System.Reflection.AssemblyProductAttribute("SealGame.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SealGame.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

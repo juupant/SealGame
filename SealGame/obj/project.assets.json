@@ -2090,6 +2090,22 @@
           }
         }
       },
+      "SealGame.ApplicationServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.Extensions.Hosting": "9.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.0",
+          "SealGame.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SealGame.ApplicationServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SealGame.ApplicationServices.dll": {}
+        }
+      },
       "SealGame.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -5427,6 +5443,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "SealGame.ApplicationServices/1.0.0": {
+      "type": "project",
+      "path": "../SealGame.ApplicationServices/SealGame.ApplicationServices.csproj",
+      "msbuildProject": "../SealGame.ApplicationServices/SealGame.ApplicationServices.csproj"
+    },
     "SealGame.Core/1.0.0": {
       "type": "project",
       "path": "../SealGame.Core/SealGame.Core.csproj",
@@ -5446,6 +5467,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
       "Microsoft.Extensions.Hosting >= 9.0.0",
       "Microsoft.Extensions.Hosting.Abstractions >= 9.0.0",
+      "SealGame.ApplicationServices >= 1.0.0",
+      "SealGame.Core >= 1.0.0",
       "SealGame.Data >= 1.0.0"
     ]
   },
@@ -5476,6 +5499,12 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.ApplicationServices\\SealGame.ApplicationServices.csproj": {
+              "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.ApplicationServices\\SealGame.ApplicationServices.csproj"
+            },
+            "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\SealGame.Core.csproj": {
+              "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Core\\SealGame.Core.csproj"
+            },
             "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Data\\SealGame.Data.csproj": {
               "projectPath": "C:\\Users\\Alan Markus\\Source\\Repos\\SealGame\\SealGame.Data\\SealGame.Data.csproj"
             }

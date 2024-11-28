@@ -17,9 +17,11 @@ namespace SealGame.Core.Domain
         
         public int SpeciesId { get; set; }
 
-        public SealSpecies Species { get; set; } 
+        public SealSpecies Species { get; set; }
+        public byte[] ImageData { get; set; }
 
-        
+
+
         public Seal() { }
 
         

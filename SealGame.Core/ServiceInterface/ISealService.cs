@@ -14,5 +14,13 @@ namespace SealGame.Core.ServiceInterface
         Task<Seal> GetSealById(int id);
         Task DeleteSeal(int id);
         Task<Seal> Update(SealDto id);
+        Task<IEnumerable<Seal>> GetAllSealsAsync();
+        Task<Seal> GetSealByIdAsync(int id);
+        Task CreateSealAsync(string name, int speciesId);
+        Task UpdateSealStatsAsync(int id, int happiness, int hunger, int enrichment, int cleanliness);
+        Task DeleteSealAsync(int id);
+        Task<Seal> FeedSealAsync(int id);
+        Task<Seal> PlayWithSealAsync(int id);
+        Task<Seal> CleanSealAsync(int id);
     }
 }

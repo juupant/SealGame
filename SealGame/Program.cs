@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using SealGame.ApplicationServices.Services;
+using SealGame.Core.ServiceInterface;
 using SealGame.Data;
 
 namespace SealGame
@@ -14,6 +16,8 @@ namespace SealGame
 
             builder.Services.AddDbContext<DatabaseTaskDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<ISealService, SealServices>();
+            builder.Services.AddScoped<IFileServices, FileServices>();
 
             var app = builder.Build();
 
