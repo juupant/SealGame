@@ -12,7 +12,7 @@ namespace SealGame.Core.Domain
         public int MaxEnrichment { get; set; }
         public int MaxCleanliness { get; set; }
 
-        public List<Seal> Seals { get; set; } = new List<Seal>(); 
+        public List<Seal?> Seals { get; set; } = new List<Seal?>(); 
 
         
         public SealSpecies() { }

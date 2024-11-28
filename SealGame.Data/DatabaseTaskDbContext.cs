@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SealGame.Core.Domain;
+using SealGame.Core.Dto;
 
 
 namespace SealGame.Data
@@ -10,6 +11,8 @@ namespace SealGame.Data
 
         public DbSet<Seal> Seals { get; set; }
         public DbSet<SealSpecies> SealSpecies { get; set; }
+        public DbSet<FileToDatabaseDto> FileToDatabaseDto { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
