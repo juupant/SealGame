@@ -9,8 +9,6 @@ namespace SealGame.Data
         public DatabaseTaskDbContext(DbContextOptions<DatabaseTaskDbContext> options) : base(options) { }
 
         public DbSet<Seal> Seals { get; set; }
-        public DbSet<Player> Players { get; set; }
-        public DbSet<Item> Items { get; set; }
         public DbSet<SealSpecies> SealSpecies { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -26,7 +24,7 @@ namespace SealGame.Data
                         MaxHunger = 50,
                         MaxEnrichment = 80,
                         MaxCleanliness = 100,
-                        Description = "A Weddell seal is a large, carnivorous species found in the Southern Ocean."
+                        Description = "imelik"
                     },
                     new SealSpecies
                     {
@@ -36,7 +34,7 @@ namespace SealGame.Data
                         MaxHunger = 60,
                         MaxEnrichment = 85,
                         MaxCleanliness = 95,
-                        Description = "A ringed seal is a small, common species found in Arctic and sub-Arctic regions."
+                        Description = "rõngik"
                     },
                     new SealSpecies
                     {
@@ -46,7 +44,7 @@ namespace SealGame.Data
                         MaxHunger = 55,
                         MaxEnrichment = 90,
                         MaxCleanliness = 100,
-                        Description = "The harbor seal is commonly found along coastlines in the Northern Hemisphere."
+                        Description = "tavaline"
                         }
             );
         }
